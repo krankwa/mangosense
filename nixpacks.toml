@@ -1,0 +1,10 @@
+[phases.setup]
+nixPkgs = ["python311", "pip"]
+
+[phases.install]
+cmds = [
+  "pip install -r mangoAPI/requirements.txt"
+]
+
+[phases.start]
+cmd = "python mangoAPI/manage.py runserver 0.0.0.0:8000"
